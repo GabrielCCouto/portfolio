@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Gabriel Couto</title>
+  <meta name="description" content="About Gabriel Couto, Mechatronics Engineer and Full Stack Developer focused on Robotics, Embedded Systems, AI and modern web technologies.">
+
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("theme");
+        if (theme !== "dark" && theme !== "light") {
+          theme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <script src="../assets/vendor/lucide.min.js" defer></script>
+  <script type="module" src="../js/pages/about.js"></script>
+</head>
+<body>
+  <main id="about" class="home-page about-page">
+
+    <div data-header></div>
+
+    <section class="about-section" aria-labelledby="about-title">
+
+      <div class="about-layout">
+
+        <div class="about-content">
+          <header class="section-header">
+            <p class="section-label">About Me</p>
+            <h1 id="about-title" class="section-title">Who I Am</h1>
+            <p class="section-description">
+              I'm a Mechatronics Engineer and Full Stack Developer passionate about building
+              intelligent systems that connect hardware and software to solve real-world
+              problems.
+            </p>
+            <p class="section-description">
+              I love turning ideas into functional solutions through robotics, embedded
+              systems, AI, and modern web technologies.
+            </p>
+          </header>
+
+          <section class="highlights" aria-label="Professional highlights">
+            <div class="highlights-grid" data-highlights-grid></div>
+          </section>
+
+          <section class="drives" aria-labelledby="drives-title">
+            <h2 id="drives-title" class="subheading">What Drives Me</h2>
+            <blockquote class="quote-card">
+              <span class="quote-card__mark" aria-hidden="true">&ldquo;</span>
+              <p>
+                I believe technology can make a real impact. I'm driven by curiosity,
+                challenge, and the desire to create solutions that improve people's lives.
+              </p>
+            </blockquote>
+          </section>
+        </div>
+
+        <aside class="profile-column" aria-label="Profile information">
+
+          <div class="profile-panel">
+            <img class="profile-image" src="../assets/profile.svg" alt="Gabriel Couto, Mechatronics Engineer and Full Stack Developer">
+
+            <ul class="profile-info" role="list" data-profile-info></ul>
+          </div>
+
+          <section class="focus" aria-labelledby="focus-title">
+            <h2 id="focus-title" class="subheading">My Focus Areas</h2>
+            <div class="focus-grid" data-focus-grid></div>
+          </section>
+
+        </aside>
+
+      </div>
+
+      <div class="page-social">
+        <div data-social-links></div>
+      </div>
+
+    </section>
+
+    <div data-back-to-top></div>
+
+  </main>
+</body>
+</html>

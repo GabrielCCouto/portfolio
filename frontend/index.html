@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Couto — Mechatronics Engineer & Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Gabriel Couto, Mechatronics Engineer and Full Stack Developer specialized in Robotics, Embedded Systems, AI, Computer Vision and Software Development.">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("theme");
+        if (theme !== "dark" && theme !== "light") {
+          theme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <script src="assets/vendor/lucide.min.js" defer></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <main id="home" class="home-page">
+
+    <div data-header></div>
+
+    <section class="hero" aria-labelledby="hero-title">
+
+      <div class="hero__content">
+        <p class="hero__greeting">Hi, I'm</p>
+
+        <h1 id="hero-title" class="hero__title">Gabriel Couto</h1>
+
+        <p class="hero__subtitle">Mechatronics Engineer &bull; Full Stack Developer</p>
+
+        <p class="hero__description">
+          I build intelligent systems that combine embedded hardware, AI, and modern web
+          technologies to solve real-world problems.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#projects">
+            View My Projects
+            <i data-lucide="arrow-right"></i>
+          </a>
+          <a class="btn btn--secondary" href="#contact">
+            Get In Touch
+          </a>
+        </div>
+
+        <div data-social-links></div>
+      </div>
+
+      <div class="hero__visualization" aria-hidden="true">
+        <svg class="robotic-arm" viewBox="0 0 400 400" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Wireframe of a robotic arm">
+          <g stroke="currentColor">
+            <rect x="150" y="368" width="100" height="16" rx="4"/>
+            <rect x="172" y="352" width="56" height="16" rx="3"/>
+            <rect x="186" y="300" width="28" height="52" rx="4"/>
+            <circle cx="200" cy="320" r="4"/>
+            <circle cx="200" cy="294" r="16"/>
+            <circle cx="200" cy="294" r="24" stroke-dasharray="4 5"/>
+            <polygon points="194.3,289.9 246.3,226.1 257.7,217.9 205.7,298.1"/>
+            <line x1="214" y1="276" x2="238" y2="248" stroke-dasharray="3 4"/>
+            <circle cx="252" cy="222" r="13"/>
+            <circle cx="252" cy="222" r="20" stroke-dasharray="4 5"/>
+            <polygon points="246.2,218.1 294.2,153.9 305.8,146.1 257.8,225.9"/>
+            <line x1="266" y1="206" x2="288" y2="176" stroke-dasharray="3 4"/>
+            <circle cx="300" cy="150" r="10"/>
+            <path d="M300 150 L322 112"/>
+            <path d="M322 112 l8 -4"/>
+            <path d="M322 112 l2 7"/>
+            <path d="M300 150 L282 116"/>
+            <path d="M282 116 l-8 -3"/>
+            <path d="M282 116 l-1 7"/>
+            <circle cx="162" cy="376" r="3"/>
+            <circle cx="238" cy="376" r="3"/>
+          </g>
+          <g class="accent" stroke-width="1.5">
+            <circle cx="200" cy="294" r="6"/>
+            <circle cx="252" cy="222" r="5"/>
+            <circle cx="300" cy="150" r="4"/>
+          </g>
+        </svg>
+
+        <div class="tech-tag tech-tag--ai">
+          <span class="tech-tag__indicator"></span>
+          <span class="tech-tag__label">AI</span>
+        </div>
+
+        <div class="tech-tag tech-tag--robotics">
+          <span class="tech-tag__indicator"></span>
+          <span class="tech-tag__label">Robotics</span>
+        </div>
+
+        <div class="tech-tag tech-tag--embedded">
+          <span class="tech-tag__indicator"></span>
+          <span class="tech-tag__label">Embedded&nbsp;Systems</span>
+        </div>
+
+        <div class="tech-tag tech-tag--web">
+          <span class="tech-tag__indicator"></span>
+          <span class="tech-tag__label">Web&nbsp;Development</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="about" class="section-placeholder reveal" aria-labelledby="about-title">
+      <div>
+        <h2 id="about-title">About</h2>
+        <p>Coming soon.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section-placeholder reveal" aria-labelledby="skills-title">
+      <div>
+        <h2 id="skills-title">Skills</h2>
+        <p>Coming soon.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section-placeholder reveal" aria-labelledby="projects-title">
+      <div>
+        <h2 id="projects-title">Projects</h2>
+        <p>Coming soon.</p>
+      </div>
+    </section>
+
+    <section id="education" class="section-placeholder reveal" aria-labelledby="education-title">
+      <div>
+        <h2 id="education-title">Education</h2>
+        <p>Coming soon.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section-placeholder reveal" aria-labelledby="contact-title">
+      <div>
+        <h2 id="contact-title">Contact</h2>
+        <p>Coming soon.</p>
+      </div>
+    </section>
+
+    <div data-back-to-top></div>
+
+  </main>
+</body>
+</html>

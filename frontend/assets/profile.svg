@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-label="Gabriel Couto portrait placeholder">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#1e293b" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="600" height="400" fill="#0f172a"/>
+  <rect width="600" height="400" fill="url(#grid)"/>
+  <rect width="600" height="400" fill="url(#glow)"/>
+
+  <circle cx="300" cy="150" r="92" fill="none" stroke="#34d399" stroke-width="2"/>
+  <circle cx="300" cy="150" r="110" fill="none" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="4 6"/>
+
+  <g fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round">
+    <circle cx="300" cy="132" r="38"/>
+    <path d="M300 178c-42 0-70 22-74 62h148c-4-40-32-62-74-62z"/>
+  </g>
+
+  <g stroke="#34d399" stroke-width="2" stroke-linecap="round">
+    <path d="M470 60v40" opacity="0.7"/>
+    <path d="M450 80h40" opacity="0.7"/>
+    <path d="M120 330v30" opacity="0.7"/>
+    <path d="M105 345h30" opacity="0.7"/>
+  </g>
+
+  <text x="300" y="352" text-anchor="middle" font-family="monospace" font-size="14" fill="#34d399" letter-spacing="3">PROFILE</text>
+</svg>
