@@ -376,7 +376,6 @@
   padding: clamp(1.5rem, 4vh, 3rem) clamp(1.25rem, 3vw, 2.5rem);
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .section-label {
@@ -481,6 +480,107 @@
   margin-top: var(--space-8);
 }
 
+.education-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-timeline {
+  margin-top: var(--space-8);
+  display: grid;
+  gap: var(--space-6);
+}
+
+.education-entry {
+  display: grid;
+  grid-template-columns: 12rem 2rem minmax(0, 1fr);
+  column-gap: var(--space-6);
+  --dot-size: 10px;
+  --dot-top: 1.9rem;
+  --dot-center: calc(var(--dot-top) + var(--dot-size) / 2);
+}
+
+.education-entry__date {
+  align-self: start;
+  margin-top: calc(var(--dot-center) - 0.76rem);
+  color: var(--color-accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.education-entry__marker {
+  position: relative;
+  display: grid;
+  justify-items: center;
+}
+
+.education-entry__marker::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: var(--color-border);
+}
+
+.education-entry__dot {
+  position: relative;
+  z-index: 1;
+  width: var(--dot-size);
+  height: var(--dot-size);
+  margin-top: var(--dot-top);
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 8px var(--color-accent);
+}
+
+.education-entry:first-child .education-entry__marker::before {
+  top: var(--dot-center);
+}
+
+.education-entry:last-child .education-entry__marker::before {
+  bottom: calc(100% - var(--dot-center));
+}
+
+.education-card {
+  min-width: 0;
+  padding: var(--space-6);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-base), border-color var(--transition-fast),
+    box-shadow var(--transition-base);
+}
+
+.education-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--color-accent) 45%, var(--color-border));
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.18);
+}
+
+.education-card h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+.education-card__institution {
+  margin-top: var(--space-2);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.education-card__description {
+  margin-top: var(--space-3);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
 .about-page {
   display: flex;
   flex-direction: column;
@@ -489,7 +589,7 @@
 .about-section {
   flex: 1;
   width: 100%;
-  padding: clamp(2rem, 5vh, 4rem) clamp(1.25rem, 3vw, 2.5rem);
+  padding: clamp(1.5rem, 4vh, 3rem) clamp(1.25rem, 3vw, 2.5rem);
 }
 
 .about-layout {
@@ -730,7 +830,8 @@ ul.profile-info {
 }
 
 @media (max-height: 850px) {
-  .page-section {
+  .page-section,
+  .about-section {
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
   }

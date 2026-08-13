@@ -85,6 +85,30 @@
   }
 }
 
+@media (max-width: 768px) {
+  .education-entry {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    column-gap: var(--space-4);
+    --dot-top: 0.2rem;
+  }
+
+  .education-entry__date {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0.2rem;
+  }
+
+  .education-entry__marker {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .education-card {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
 @media (max-width: 560px) {
   .focus-grid {
     grid-template-columns: 1fr;
