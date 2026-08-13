@@ -1,7 +1,6 @@
 export function createFocusArea(area, index = 0) {
   const item = document.createElement("article");
-  item.className = "focus-area reveal";
-  item.style.setProperty("--card-delay", `${index * 75}ms`);
+  item.className = "focus-area";
   item.innerHTML = `
     <div class="focus-area__icon">
       <i data-lucide="${area.icon}"></i>

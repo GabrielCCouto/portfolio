@@ -2,8 +2,7 @@ export function createHighlightCard(highlight, index = 0) {
   const description = highlight.description.join("<br>");
 
   const card = document.createElement("article");
-  card.className = "highlight-card reveal";
-  card.style.setProperty("--card-delay", `${index * 75}ms`);
+  card.className = "highlight-card";
   card.innerHTML = `
     <div class="highlight-card__icon">
       <i data-lucide="${highlight.icon}"></i>

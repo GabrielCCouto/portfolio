@@ -1,4 +1,3 @@
-import { renderHeader } from "../../components/header.js";
 import { renderSocialLinks } from "../../components/socialLinks.js";
 import { renderBackToTop } from "../../components/backToTop.js";
 import { createHighlightCard } from "../../components/highlightCard.js";
@@ -9,7 +8,6 @@ import { highlights, focusAreas, profileInfo } from "../data/about.js";
 
 document.body.dataset.page = "about";
 
-renderHeader({ active: "about", base: "../" });
 renderSocialLinks();
 renderBackToTop();
 

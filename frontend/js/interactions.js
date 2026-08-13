@@ -2,11 +2,11 @@ export function initInteractions() {
   initMobileMenu();
   initScrollSpy();
   initBackToTop();
-  initReveal();
 }
 
 function setMenuOpen(toggle, menu, open) {
   menu.classList.toggle("is-open", open);
+  toggle.classList.toggle("is-open", open);
   toggle.setAttribute("aria-expanded", String(open));
   toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
 }
@@ -70,28 +70,4 @@ function initBackToTop() {
 
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
-}
-
-function initReveal() {
-  const elements = document.querySelectorAll(".reveal");
-  if (!elements.length) return;
-
-  if (!("IntersectionObserver" in window)) {
-    elements.forEach((element) => element.classList.add("is-revealed"));
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-revealed");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-
-  elements.forEach((element) => observer.observe(element));
 }

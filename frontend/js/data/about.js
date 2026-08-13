@@ -14,11 +14,6 @@ export const highlights = [
     value: "20+",
     description: ["Projects", "Robotics, AI, Web & Embedded"],
   },
-  {
-    icon: "target",
-    value: "Always",
-    description: ["Learning", "Exploring new technologies"],
-  },
 ];
 
 export const focusAreas = [

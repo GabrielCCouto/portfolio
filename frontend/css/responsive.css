@@ -63,15 +63,46 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 700px) {
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  .focus-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 560px) {
   .skill-card {
     padding: var(--space-6);
+  }
+}
+
+@media (max-width: 560px) {
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-card {
+    padding: var(--space-6);
+  }
+
+  .profile-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-image {
+    height: auto;
+    aspect-ratio: 1.5 / 1;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
   }
 }
 

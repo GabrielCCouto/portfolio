@@ -1,4 +1,3 @@
-import { renderHeader } from "../../components/header.js";
 import { renderSocialLinks } from "../../components/socialLinks.js";
 import { renderBackToTop } from "../../components/backToTop.js";
 import { createSkillCard } from "../../components/skillCard.js";
@@ -8,7 +7,6 @@ import { skills } from "../data/skills.js";
 
 document.body.dataset.page = "skills";
 
-renderHeader({ active: "skills", base: "../" });
 renderSocialLinks();
 renderBackToTop();
 

@@ -6,6 +6,7 @@
   <title>About — Gabriel Couto</title>
   <meta name="description" content="About Gabriel Couto, Mechatronics Engineer and Full Stack Developer focused on Robotics, Embedded Systems, AI and modern web technologies.">
 
+  <link rel="stylesheet" href="../css/fonts.css">
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -30,7 +31,43 @@
 <body>
   <main id="about" class="home-page about-page">
 
-    <div data-header></div>
+    <header class="site-header">
+      <a href="../index.html#home" class="logo" aria-label="Back to home">&lt;Dev/Portfolio&gt;</a>
+
+      <nav class="nav" data-nav-menu id="nav-menu" aria-label="Main navigation">
+        <ul class="nav__list" role="list">
+          <li>
+            <a class="nav__link" href="../index.html#home" data-nav-link>Home</a>
+          </li>
+          <li>
+            <a class="nav__link is-active" href="#about" data-nav-link>About</a>
+          </li>
+          <li>
+            <a class="nav__link" href="../pages/skills.html#skills" data-nav-link>Skills</a>
+          </li>
+          <li>
+            <a class="nav__link" href="../index.html#projects" data-nav-link>Projects</a>
+          </li>
+          <li>
+            <a class="nav__link" href="../index.html#education" data-nav-link>Education</a>
+          </li>
+          <li>
+            <a class="nav__link" href="../index.html#contact" data-nav-link>Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme">
+          <i data-lucide="sun"></i>
+          <i data-lucide="moon"></i>
+        </button>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+          <i data-lucide="menu"></i>
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+    </header>
 
     <section class="about-section" aria-labelledby="about-title">
 
@@ -54,33 +91,29 @@
           <section class="highlights" aria-label="Professional highlights">
             <div class="highlights-grid" data-highlights-grid></div>
           </section>
-
-          <section class="drives" aria-labelledby="drives-title">
-            <h2 id="drives-title" class="subheading">What Drives Me</h2>
-            <blockquote class="quote-card">
-              <span class="quote-card__mark" aria-hidden="true">&ldquo;</span>
-              <p>
-                I believe technology can make a real impact. I'm driven by curiosity,
-                challenge, and the desire to create solutions that improve people's lives.
-              </p>
-            </blockquote>
-          </section>
         </div>
 
-        <aside class="profile-column" aria-label="Profile information">
+        <div class="profile-panel" aria-label="Profile information">
+          <img class="profile-image" src="../assets/profile.svg" alt="Gabriel Couto, Mechatronics Engineer and Full Stack Developer">
 
-          <div class="profile-panel">
-            <img class="profile-image" src="../assets/profile.svg" alt="Gabriel Couto, Mechatronics Engineer and Full Stack Developer">
+          <ul class="profile-info" role="list" data-profile-info></ul>
+        </div>
 
-            <ul class="profile-info" role="list" data-profile-info></ul>
-          </div>
+        <section class="drives" aria-labelledby="drives-title">
+          <h2 id="drives-title" class="subheading">What Drives Me</h2>
+          <blockquote class="quote-card">
+            <span class="quote-card__mark" aria-hidden="true">&ldquo;</span>
+            <p>
+              I believe technology can make a real impact. I'm driven by curiosity,
+              challenge, and the desire to create solutions that improve people's lives.
+            </p>
+          </blockquote>
+        </section>
 
-          <section class="focus" aria-labelledby="focus-title">
-            <h2 id="focus-title" class="subheading">My Focus Areas</h2>
-            <div class="focus-grid" data-focus-grid></div>
-          </section>
-
-        </aside>
+        <section class="focus" aria-labelledby="focus-title">
+          <h2 id="focus-title" class="subheading">My Focus Areas</h2>
+          <div class="focus-grid" data-focus-grid></div>
+        </section>
 
       </div>
 
