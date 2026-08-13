@@ -41,3 +41,176 @@
 .robotic-arm {
   animation: arm-glow 5s ease-in-out infinite;
 }
+
+/* ===== Entrance animations ===== */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero__greeting,
+.hero__title,
+.hero__subtitle,
+.hero__description,
+.hero__actions,
+.hero .social-links,
+.page-section .section-label,
+.page-section .section-title,
+.page-section .section-description,
+.about-content .section-label,
+.about-content .section-title,
+.about-content .section-description,
+.drives,
+.page-social {
+  animation-name: fade-up;
+  animation-duration: 0.65s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: backwards;
+}
+
+.skill-card,
+.highlights-grid > *,
+.focus-grid > * {
+  animation-name: fade-up;
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: backwards;
+}
+
+.profile-panel,
+.hero__visualization {
+  animation-name: scale-in;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: backwards;
+}
+
+.hero__greeting {
+  animation-delay: 0ms;
+}
+
+.hero__title {
+  animation-delay: 90ms;
+}
+
+.hero__subtitle {
+  animation-delay: 180ms;
+}
+
+.hero__description {
+  animation-delay: 270ms;
+}
+
+.hero__actions {
+  animation-delay: 360ms;
+}
+
+.hero .social-links {
+  animation-delay: 450ms;
+}
+
+.hero__visualization {
+  animation-delay: 150ms;
+}
+
+.page-section .section-label,
+.about-content .section-label {
+  animation-delay: 0ms;
+}
+
+.page-section .section-title,
+.about-content .section-title {
+  animation-delay: 90ms;
+}
+
+.page-section .section-description,
+.about-content .section-description {
+  animation-delay: 180ms;
+}
+
+.about-content .section-description + .section-description {
+  animation-delay: 260ms;
+}
+
+.skill-card:nth-child(1) {
+  animation-delay: 260ms;
+}
+
+.skill-card:nth-child(2) {
+  animation-delay: 340ms;
+}
+
+.skill-card:nth-child(3) {
+  animation-delay: 420ms;
+}
+
+.skill-card:nth-child(4) {
+  animation-delay: 500ms;
+}
+
+.profile-panel {
+  animation-delay: 300ms;
+}
+
+.highlights-grid > :nth-child(1) {
+  animation-delay: 340ms;
+}
+
+.highlights-grid > :nth-child(2) {
+  animation-delay: 420ms;
+}
+
+.highlights-grid > :nth-child(3) {
+  animation-delay: 500ms;
+}
+
+.drives {
+  animation-delay: 480ms;
+}
+
+.focus-grid > :nth-child(1) {
+  animation-delay: 480ms;
+}
+
+.focus-grid > :nth-child(2) {
+  animation-delay: 550ms;
+}
+
+.focus-grid > :nth-child(3) {
+  animation-delay: 620ms;
+}
+
+.focus-grid > :nth-child(4) {
+  animation-delay: 690ms;
+}
+
+.page-social {
+  animation-delay: 800ms;
+}

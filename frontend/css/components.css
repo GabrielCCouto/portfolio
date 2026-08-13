@@ -373,9 +373,7 @@
 .page-section {
   flex: 1;
   width: 100%;
-  max-width: 1100px;
-  margin-inline: auto;
-  padding: clamp(1.5rem, 4vh, 3rem) clamp(1.5rem, 4vw, 3.5rem);
+  padding: clamp(1.5rem, 4vh, 3rem) clamp(1.25rem, 3vw, 2.5rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
