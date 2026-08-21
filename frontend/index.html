@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gabriel Couto — Mechatronics Engineer & Full Stack Developer</title>
+  <title>Gabriel Couto</title>
   <meta name="description" content="Portfolio of Gabriel Couto, Mechatronics Engineer and Full Stack Developer specialized in Robotics, Embedded Systems, AI, Computer Vision and Software Development.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/tokens.css">
@@ -46,7 +47,7 @@
             <a class="nav__link" href="pages/skills.html#skills" data-nav-link>Skills</a>
           </li>
           <li>
-            <a class="nav__link" href="index.html#projects" data-nav-link>Projects</a>
+            <a class="nav__link" href="index.html#projects" data-coming-soon data-nav-link>Projects</a>
           </li>
           <li>
             <a class="nav__link" href="pages/education.html#education" data-nav-link>Education</a>
@@ -84,7 +85,7 @@
         </p>
 
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#projects">
+          <a class="btn btn--primary" href="#projects" data-coming-soon>
             View My Projects
             <i data-lucide="arrow-right"></i>
           </a>
@@ -150,7 +151,7 @@
       </div>
 
       <a class="hero__scroll" href="#projects" aria-label="Scroll to next section">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
       </a>
@@ -198,7 +199,7 @@
           </span>
         </a>
 
-        <a class="home-card" href="https://github.com/gabrielccouto" target="_blank" rel="noopener noreferrer" aria-label="See my work on GitHub">
+        <div class="home-card" role="button" tabindex="0" data-coming-soon aria-label="Projects coming soon">
           <span class="home-card__icon" aria-hidden="true">
             <i data-lucide="rocket"></i>
           </span>
@@ -213,7 +214,7 @@
           <span class="btn btn--secondary home-card__button">
             See my work <i data-lucide="arrow-right"></i>
           </span>
-        </a>
+        </div>
 
         <a class="home-card" href="pages/education.html#education" aria-label="Full timeline">
           <span class="home-card__icon" aria-hidden="true">

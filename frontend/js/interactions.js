@@ -5,6 +5,7 @@ export function initInteractions() {
   initBackToTop();
   initScrollArrow();
   initContactPopup();
+  initComingSoon();
 }
 
 function initReveal() {
@@ -139,4 +140,29 @@ function initContactPopup() {
     open();
     history.replaceState(null, "", location.pathname + location.search);
   }
+}
+
+function initComingSoon() {
+  let toast = null;
+
+  const show = (e) => {
+    e.preventDefault();
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.className = "toast";
+      toast.textContent = "Coming Soon";
+      document.body.appendChild(toast);
+    }
+    requestAnimationFrame(() => {
+      toast.classList.add("is-visible");
+    });
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(() => {
+      toast.classList.remove("is-visible");
+    }, 2500);
+  };
+
+  document.querySelectorAll("[data-coming-soon]").forEach((el) => {
+    el.addEventListener("click", show);
+  });
 }
