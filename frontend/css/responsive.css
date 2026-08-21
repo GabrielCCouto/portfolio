@@ -19,6 +19,15 @@
     padding-top: 3rem;
   }
 
+  .home-cards {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+  }
+
+  .home-cards__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .hero__content {
     max-width: 36rem;
   }
@@ -160,5 +169,17 @@
   .back-to-top {
     right: 1.25rem;
     bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-cards__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .home-cards__grid {
+    grid-template-columns: 1fr;
   }
 }

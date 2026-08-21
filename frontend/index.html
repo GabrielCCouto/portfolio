@@ -52,7 +52,7 @@
             <a class="nav__link" href="pages/education.html#education" data-nav-link>Education</a>
           </li>
           <li>
-            <a class="nav__link" href="index.html#contact" data-nav-link>Contact</a>
+            <a class="nav__link" href="#contact" data-contact-popup data-nav-link>Contact</a>
           </li>
         </ul>
       </nav>
@@ -76,7 +76,7 @@
 
         <h1 id="hero-title" class="hero__title">Gabriel Couto</h1>
 
-        <p class="hero__subtitle">Mechatronics Engineer &bull; Full Stack Developer</p>
+        <p class="hero__subtitle">Embedded AI Engineer &bull; Edge AI &bull; Computer Vision &bull; IoT &bull; ESP32, STM32, Raspberry Pi &bull; TensorFlow Lite &bull; C/C++ &bull; Python</p>
 
         <p class="hero__description">
           I build intelligent systems that combine embedded hardware, AI, and modern web
@@ -88,9 +88,9 @@
             View My Projects
             <i data-lucide="arrow-right"></i>
           </a>
-          <a class="btn btn--secondary" href="#contact">
+          <button type="button" class="btn btn--secondary" data-contact-popup>
             Get In Touch
-          </a>
+          </button>
         </div>
 
         <div data-social-links></div>
@@ -149,42 +149,135 @@
         </div>
       </div>
 
+      <a class="hero__scroll" href="#projects" aria-label="Scroll to next section">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
     </section>
 
-    <section id="about" class="section-placeholder" aria-labelledby="about-title">
-      <div>
-        <h2 id="about-title">About</h2>
-        <p>Coming soon.</p>
+    <section id="projects" class="home-cards" aria-labelledby="cards-title">
+      <header class="home-cards__header">
+        <p class="section-label">Explore</p>
+        <h2 id="cards-title" class="section-title">What's Next</h2>
+      </header>
+
+      <div class="home-cards__grid">
+
+        <a class="home-card" href="pages/about.html#about" aria-label="About me">
+          <span class="home-card__icon" aria-hidden="true">
+            <i data-lucide="user"></i>
+          </span>
+          <span class="home-card__body">
+            <p class="home-card__label">About Me</p>
+            <h3 class="home-card__title">Who I Am</h3>
+            <p class="home-card__description">
+              Engineer building intelligent systems, from embedded
+              hardware to AI and web applications.
+            </p>
+          </span>
+          <span class="btn btn--secondary home-card__button">
+            About me <i data-lucide="arrow-right"></i>
+          </span>
+        </a>
+
+        <a class="home-card" href="pages/skills.html#skills" aria-label="View my skills">
+          <span class="home-card__icon" aria-hidden="true">
+            <i data-lucide="cpu"></i>
+          </span>
+          <span class="home-card__body">
+            <p class="home-card__label">Skills</p>
+            <h3 class="home-card__title">What I Work With</h3>
+            <p class="home-card__description">
+              Embedded, robotics, computer vision, ML and
+              full-stack web development.
+            </p>
+          </span>
+          <span class="btn btn--secondary home-card__button">
+            View my skills <i data-lucide="arrow-right"></i>
+          </span>
+        </a>
+
+        <a class="home-card" href="https://github.com/gabrielccouto" target="_blank" rel="noopener noreferrer" aria-label="See my work on GitHub">
+          <span class="home-card__icon" aria-hidden="true">
+            <i data-lucide="rocket"></i>
+          </span>
+          <span class="home-card__body">
+            <p class="home-card__label">Projects</p>
+            <h3 class="home-card__title">Featured Work</h3>
+            <p class="home-card__description">
+              Selected work in robotics, AI, computer
+              vision and web development.
+            </p>
+          </span>
+          <span class="btn btn--secondary home-card__button">
+            See my work <i data-lucide="arrow-right"></i>
+          </span>
+        </a>
+
+        <a class="home-card" href="pages/education.html#education" aria-label="Full timeline">
+          <span class="home-card__icon" aria-hidden="true">
+            <i data-lucide="graduation-cap"></i>
+          </span>
+          <span class="home-card__body">
+            <p class="home-card__label">Education</p>
+            <h3 class="home-card__title">My Journey</h3>
+            <p class="home-card__description">
+              Mechatronics engineering plus deep learning
+              and real-time systems courses.
+            </p>
+          </span>
+          <span class="btn btn--secondary home-card__button">
+            Full timeline <i data-lucide="arrow-right"></i>
+          </span>
+        </a>
+
+        <a class="home-card" href="mailto:gabrihcosta@gmail.com" aria-label="Get in touch by email">
+          <span class="home-card__icon" aria-hidden="true">
+            <i data-lucide="mail"></i>
+          </span>
+          <span class="home-card__body">
+            <p class="home-card__label">Contact</p>
+            <h3 class="home-card__title">Let's Talk</h3>
+            <p class="home-card__description">
+              Open to new opportunities — let's build something
+              great together.
+            </p>
+          </span>
+          <span class="btn btn--secondary home-card__button">
+            Get In Touch <i data-lucide="arrow-right"></i>
+          </span>
+        </a>
+
       </div>
     </section>
 
-    <section id="skills" class="section-placeholder" aria-labelledby="skills-title">
-      <div>
-        <h2 id="skills-title">Skills</h2>
-        <p>Coming soon.</p>
-      </div>
-    </section>
+    <span id="contact" class="home-cards__anchor" aria-hidden="true"></span>
 
-    <section id="projects" class="section-placeholder" aria-labelledby="projects-title">
-      <div>
-        <h2 id="projects-title">Projects</h2>
-        <p>Coming soon.</p>
+    <div class="contact-popup" data-contact-popup-modal hidden>
+      <div class="contact-popup__backdrop" data-close-contact-popup></div>
+      <div class="contact-popup__card" role="dialog" aria-labelledby="contact-popup-title">
+        <button type="button" class="contact-popup__close" data-close-contact-popup aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+        <p class="contact-popup__title" id="contact-popup-title">Get In Touch</p>
+        <p class="contact-popup__message">
+          Thanks for reaching out! If you'd like to stay in touch, feel free
+          to send me a message through any of these channels.
+        </p>
+        <div class="contact-popup__channels">
+          <a class="contact-popup__channel" href="https://wa.me/5541991870893" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+          <a class="contact-popup__channel" href="https://www.linkedin.com/in/gabriel-henrique-couto-da-costa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a class="contact-popup__channel" href="mailto:gabrihcosta@gmail.com" aria-label="Email">
+            <i data-lucide="mail"></i>
+          </a>
+        </div>
       </div>
-    </section>
-
-    <section id="education" class="section-placeholder" aria-labelledby="education-title">
-      <div>
-        <h2 id="education-title">Education</h2>
-        <p>Coming soon.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section-placeholder" aria-labelledby="contact-title">
-      <div>
-        <h2 id="contact-title">Contact</h2>
-        <p>Coming soon.</p>
-      </div>
-    </section>
+    </div>
 
     <div data-back-to-top></div>
 

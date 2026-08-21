@@ -244,3 +244,42 @@
 .page-social {
   animation-delay: 800ms;
 }
+
+.home-cards.is-in-view .home-card__icon,
+.home-cards.is-in-view .home-card__body,
+.home-cards.is-in-view .home-card__button {
+  animation-name: fade-up;
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: backwards;
+}
+
+.home-cards.is-in-view .home-card:nth-child(1) .home-card__icon,
+.home-cards.is-in-view .home-card:nth-child(1) .home-card__body,
+.home-cards.is-in-view .home-card:nth-child(1) .home-card__button {
+  animation-delay: 0ms;
+}
+
+.home-cards.is-in-view .home-card:nth-child(2) .home-card__icon,
+.home-cards.is-in-view .home-card:nth-child(2) .home-card__body,
+.home-cards.is-in-view .home-card:nth-child(2) .home-card__button {
+  animation-delay: 80ms;
+}
+
+.home-cards.is-in-view .home-card:nth-child(3) .home-card__icon,
+.home-cards.is-in-view .home-card:nth-child(3) .home-card__body,
+.home-cards.is-in-view .home-card:nth-child(3) .home-card__button {
+  animation-delay: 160ms;
+}
+
+.home-cards.is-in-view .home-card:nth-child(4) .home-card__icon,
+.home-cards.is-in-view .home-card:nth-child(4) .home-card__body,
+.home-cards.is-in-view .home-card:nth-child(4) .home-card__button {
+  animation-delay: 240ms;
+}
+
+.home-cards.is-in-view .home-card:nth-child(5) .home-card__icon,
+.home-cards.is-in-view .home-card:nth-child(5) .home-card__body,
+.home-cards.is-in-view .home-card:nth-child(5) .home-card__button {
+  animation-delay: 320ms;
+}
